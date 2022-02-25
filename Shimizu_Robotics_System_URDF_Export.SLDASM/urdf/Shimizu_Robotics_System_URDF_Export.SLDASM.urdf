@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Shimizu_Robotics_System_URDF_Export.SLDASM">
+  <link
+    name="Gantry_X">
+    <inertial>
+      <origin
+        xyz="11.601 4.9939 15.827"
+        rpy="0 0 0" />
+      <mass
+        value="11710" />
+      <inertia
+        ixx="63802"
+        ixy="1.8081E-13"
+        ixz="-9.9792E-12"
+        iyy="107050"
+        iyz="-0.050437"
+        izz="45367" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Gantry_X.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Gantry_X.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Gantry_Y">
+    <inertial>
+      <origin
+        xyz="11.567 7.7681 0.2024"
+        rpy="0 0 0" />
+      <mass
+        value="740.03" />
+      <inertia
+        ixx="17.062"
+        ixy="0.002039"
+        ixz="-4.9328E-14"
+        iyy="2279.9"
+        iyz="8.2965E-16"
+        izz="2278.6" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Gantry_Y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Gantry_Y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gantry_X_to_Y"
+    type="prismatic">
+    <origin
+      xyz="0 -16.234 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Gantry_X" />
+    <child
+      link="Gantry_Y" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Base">
+    <inertial>
+      <origin
+        xyz="0.36884 7.2709 17.038"
+        rpy="0 0 0" />
+      <mass
+        value="645.33" />
+      <inertia
+        ixx="213.99"
+        ixy="0.12239"
+        ixz="-0.00078064"
+        iyy="42.439"
+        iyz="-0.00056304"
+        izz="227.81" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gantry_Y_to_Base"
+    type="prismatic">
+    <origin
+      xyz="12.615 0 -16.852"
+      rpy="0 0 0" />
+    <parent
+      link="Gantry_Y" />
+    <child
+      link="Base" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_1">
+    <inertial>
+      <origin
+        xyz="0.15386 -0.01084 -0.23834"
+        rpy="0 0 0" />
+      <mass
+        value="39.488" />
+      <inertia
+        ixx="0.82415"
+        ixy="-0.13884"
+        ixz="-0.16266"
+        iyy="1.5307"
+        iyz="0.086028"
+        izz="1.6236" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint1"
+    type="continuous">
+    <origin
+      xyz="0.44563 5.7729 17.038"
+      rpy="-1.5708 -0.29756 3.1416" />
+    <parent
+      link="Base" />
+    <child
+      link="Link_1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Link_2">
+    <inertial>
+      <origin
+        xyz="0.020078 0.20905 0.39436"
+        rpy="0 0 0" />
+      <mass
+        value="26.224" />
+      <inertia
+        ixx="2.763"
+        ixy="-0.0029338"
+        ixz="-0.019264"
+        iyy="2.8501"
+        iyz="-0.031691"
+        izz="0.15604" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_2"
+    type="continuous">
+    <origin
+      xyz="0.32 0 -0.1973"
+      rpy="0 1.4193 0" />
+    <parent
+      link="Link_1" />
+    <child
+      link="Link_2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Link_3">
+    <inertial>
+      <origin
+        xyz="0.1709 0.0054369 0.13441"
+        rpy="0 0 0" />
+      <mass
+        value="41.069" />
+      <inertia
+        ixx="0.9459"
+        ixy="-0.009691"
+        ixz="-0.49973"
+        iyy="2.6922"
+        iyz="-0.024445"
+        izz="2.2908" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_3"
+    type="continuous">
+    <origin
+      xyz="0 0 0.87"
+      rpy="-3.1416 -0.53738 -3.1416" />
+    <parent
+      link="Link_2" />
+    <child
+      link="Link_3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Link_4">
+    <inertial>
+      <origin
+        xyz="0.15531 -0.0026884 -7.1732E-06"
+        rpy="0 0 0" />
+      <mass
+        value="2.0071" />
+      <inertia
+        ixx="0.0038933"
+        ixy="0.00064975"
+        ixz="8.2834E-07"
+        iyy="0.013325"
+        iyz="-4.7487E-07"
+        izz="0.013382" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_4"
+    type="continuous">
+    <origin
+      xyz="0.77532 0.0115 0.225"
+      rpy="-2.7191 0 0" />
+    <parent
+      link="Link_3" />
+    <child
+      link="Link_4" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="Link_5">
+    <inertial>
+      <origin
+        xyz="0.050878 -0.022728 -2.9198E-11"
+        rpy="0 0 0" />
+      <mass
+        value="3.6409" />
+      <inertia
+        ixx="0.0192"
+        ixy="-0.0045288"
+        ixz="-3.1537E-12"
+        iyy="0.019576"
+        iyz="2.411E-12"
+        izz="0.028883" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_5"
+    type="continuous">
+    <origin
+      xyz="0.25418 0 0"
+      rpy="0 0.43301 0" />
+    <parent
+      link="Link_4" />
+    <child
+      link="Link_5" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Link_6">
+    <inertial>
+      <origin
+        xyz="3.5527E-15 -2.2024E-05 0.0030444"
+        rpy="0 0 0" />
+      <mass
+        value="0.22702" />
+      <inertia
+        ixx="0.00022782"
+        ixy="1.2197E-19"
+        ixz="-6.346E-18"
+        iyy="0.00022856"
+        iyz="-3.9842E-08"
+        izz="0.00043885" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Shimizu_Robotics_System_URDF_Export.SLDASM/meshes/Link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_6"
+    type="continuous">
+    <origin
+      xyz="0.17392 -0.009 0"
+      rpy="1.5708 0.62505 1.5708" />
+    <parent
+      link="Link_5" />
+    <child
+      link="Link_6" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
