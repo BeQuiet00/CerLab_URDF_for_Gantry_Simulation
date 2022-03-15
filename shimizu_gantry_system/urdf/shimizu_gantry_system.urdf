@@ -8,17 +8,17 @@
     name="gantry_x">
     <inertial>
       <origin
-        xyz="11.601 4.9939 15.827"
+        xyz="11.601 -15.827 4.9939"
         rpy="0 0 0" />
       <mass
         value="11710" />
       <inertia
         ixx="63802"
-        ixy="2.5029E-13"
-        ixz="-1.4755E-11"
-        iyy="107050"
-        iyz="-0.050437"
-        izz="45367" />
+        ixy="1.1691E-11"
+        ixz="2.0818E-13"
+        iyy="45367"
+        iyz="0.050437"
+        izz="107050" />
     </inertial>
     <visual>
       <origin
@@ -31,7 +31,7 @@
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -48,17 +48,17 @@
     name="gantry_y">
     <inertial>
       <origin
-        xyz="11.567 7.7681 0.2024"
+        xyz="-0.184 0.17153 3.0187"
         rpy="0 0 0" />
       <mass
         value="740.03" />
       <inertia
-        ixx="17.062"
-        ixy="0.002039"
-        ixz="-4.9328E-14"
+        ixx="2278.6"
+        ixy="1.7659E-08"
+        ixz="2.8771E-11"
         iyy="2279.9"
-        iyz="8.4126E-16"
-        izz="2278.6" />
+        iyz="0.002039"
+        izz="17.062" />
     </inertial>
     <visual>
       <origin
@@ -71,7 +71,7 @@
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -85,17 +85,17 @@
     </collision>
   </link>
   <joint
-    name="linear_joint_x_to_y"
+    name="x_to_y"
     type="prismatic">
     <origin
-      xyz="0 -16.199 0"
-      rpy="1.5708 0 0" />
+      xyz="8.5487 -16.257 7.5966"
+      rpy="1.5708 0 1.5708" />
     <parent
       link="gantry_x" />
     <child
       link="gantry_y" />
     <axis
-      xyz="0 0 1" />
+      xyz="1 0 0" />
     <limit
       lower="0"
       upper="0"
@@ -129,7 +129,7 @@
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -143,11 +143,11 @@
     </collision>
   </link>
   <joint
-    name="linear_joint_y_to_base"
+    name="y_to_base"
     type="prismatic">
     <origin
-      xyz="12.22 0 -16.852"
-      rpy="0 0 0" />
+      xyz="16.87 -7.5966 2.4892"
+      rpy="0 -1.5708 0" />
     <parent
       link="gantry_y" />
     <child
@@ -161,10 +161,10 @@
       velocity="0" />
   </joint>
   <link
-    name="link_1">
+    name="link1">
     <inertial>
       <origin
-        xyz="0.15386 -0.01084 -0.23834"
+        xyz="0.15386 -0.010839 -0.23834"
         rpy="0 0 0" />
       <mass
         value="39.488" />
@@ -173,7 +173,7 @@
         ixy="-0.13884"
         ixz="-0.16266"
         iyy="1.5307"
-        iyz="0.086028"
+        iyz="0.086029"
         izz="1.6236" />
     </inertial>
     <visual>
@@ -182,7 +182,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_1.STL" />
+          filename="package://shimizu_gantry_system/meshes/link1.STL" />
       </geometry>
       <material
         name="">
@@ -196,34 +196,34 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_1.STL" />
+          filename="package://shimizu_gantry_system/meshes/link1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="joint_1"
+    name="joint1"
     type="continuous">
     <origin
       xyz="0.44563 5.7729 17.038"
-      rpy="-1.5708 -0.29756 3.1416" />
+      rpy="1.5708 0 0" />
     <parent
       link="base" />
     <child
-      link="link_1" />
+      link="link1" />
     <axis
       xyz="0 0 1" />
   </joint>
   <link
-    name="link_2">
+    name="link2">
     <inertial>
       <origin
-        xyz="0.020078 0.20905 0.39436"
+        xyz="0.020078 0.13105 0.39436"
         rpy="0 0 0" />
       <mass
         value="26.224" />
       <inertia
         ixx="2.763"
-        ixy="-0.0029339"
+        ixy="-0.0029337"
         ixz="-0.019264"
         iyy="2.8501"
         iyz="-0.03169"
@@ -235,7 +235,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_2.STL" />
+          filename="package://shimizu_gantry_system/meshes/link2.STL" />
       </geometry>
       <material
         name="">
@@ -249,37 +249,37 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_2.STL" />
+          filename="package://shimizu_gantry_system/meshes/link2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="joint_2"
+    name="joint2"
     type="continuous">
     <origin
-      xyz="0.32 0 -0.1973"
-      rpy="0 1.4788 0" />
+      xyz="0.32 0.078 -0.1973"
+      rpy="0 1.5708 0" />
     <parent
-      link="link_1" />
+      link="link1" />
     <child
-      link="link_2" />
+      link="link2" />
     <axis
       xyz="0 1 0" />
   </joint>
   <link
-    name="link_3">
+    name="link3">
     <inertial>
       <origin
-        xyz="0.1709 0.0054369 0.13441"
+        xyz="0.1709 -0.072562 0.13441"
         rpy="0 0 0" />
       <mass
         value="41.069" />
       <inertia
-        ixx="0.9459"
-        ixy="-0.009691"
-        ixz="-0.49973"
+        ixx="0.94589"
+        ixy="-0.0096923"
+        ixz="-0.49972"
         iyy="2.6922"
-        iyz="-0.024445"
+        iyz="-0.024444"
         izz="2.2908" />
     </inertial>
     <visual>
@@ -288,7 +288,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_3.STL" />
+          filename="package://shimizu_gantry_system/meshes/link3.STL" />
       </geometry>
       <material
         name="">
@@ -302,37 +302,37 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_3.STL" />
+          filename="package://shimizu_gantry_system/meshes/link3.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="joint_3"
+    name="joint3"
     type="continuous">
     <origin
       xyz="0 0 0.87"
-      rpy="0 -0.47456 0" />
+      rpy="0 0 0" />
     <parent
-      link="link_2" />
+      link="link2" />
     <child
-      link="link_3" />
+      link="link3" />
     <axis
       xyz="0 1 0" />
   </joint>
   <link
-    name="link_4">
+    name="link4">
     <inertial>
       <origin
-        xyz="0.155 -0.0026884 -7.173E-06"
+        xyz="0.10063 -0.0026884 -7.1301E-06"
         rpy="0 0 0" />
       <mass
         value="2.0071" />
       <inertia
         ixx="0.0038933"
         ixy="0.00064975"
-        ixz="8.2833E-07"
+        ixz="8.2647E-07"
         iyy="0.013325"
-        iyz="-4.7487E-07"
+        iyz="-4.7432E-07"
         izz="0.013382" />
     </inertial>
     <visual>
@@ -341,7 +341,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_4.STL" />
+          filename="package://shimizu_gantry_system/meshes/link4.STL" />
       </geometry>
       <material
         name="">
@@ -355,37 +355,37 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_4.STL" />
+          filename="package://shimizu_gantry_system/meshes/link4.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="joint_4"
+    name="joint4"
     type="continuous">
     <origin
-      xyz="0.77564 0.0115 0.225"
-      rpy="-2.7191 0 0" />
+      xyz="0.83 -0.0665 0.225"
+      rpy="0 0 0" />
     <parent
-      link="link_3" />
+      link="link3" />
     <child
-      link="link_4" />
+      link="link4" />
     <axis
       xyz="1 0 0" />
   </joint>
   <link
-    name="link_5">
+    name="link5">
     <inertial>
       <origin
-        xyz="0.050878 -0.022728 -2.9296E-11"
+        xyz="0.050878 -0.022728 -5.4373E-11"
         rpy="0 0 0" />
       <mass
         value="3.6409" />
       <inertia
         ixx="0.0192"
         ixy="-0.0045288"
-        ixz="-3.1241E-12"
+        ixz="-3.9525E-12"
         iyy="0.019576"
-        iyz="2.3765E-12"
+        iyz="-2.9081E-13"
         izz="0.028883" />
     </inertial>
     <visual>
@@ -394,7 +394,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_5.STL" />
+          filename="package://shimizu_gantry_system/meshes/link5.STL" />
       </geometry>
       <material
         name="">
@@ -408,35 +408,35 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_5.STL" />
+          filename="package://shimizu_gantry_system/meshes/link5.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="joint_5"
+    name="joint5"
     type="continuous">
     <origin
-      xyz="0.25386 0 0"
-      rpy="0 0.43006 0" />
+      xyz="0.1995 0 0"
+      rpy="0 0 0" />
     <parent
-      link="link_4" />
+      link="link4" />
     <child
-      link="link_5" />
+      link="link5" />
     <axis
       xyz="0 1 0" />
   </joint>
   <link
-    name="link_6">
+    name="link6">
     <inertial>
       <origin
-        xyz="1.7764E-14 -2.2024E-05 0.0030403"
+        xyz="0 2.2024E-05 -0.010468"
         rpy="0 0 0" />
       <mass
         value="0.22702" />
       <inertia
         ixx="0.00022782"
-        ixy="-1.423E-19"
-        ixz="-4.513E-18"
+        ixy="-4.7234E-22"
+        ixz="6.1755E-21"
         iyy="0.00022856"
         iyz="-3.9842E-08"
         izz="0.00043885" />
@@ -447,7 +447,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_6.STL" />
+          filename="package://shimizu_gantry_system/meshes/link6.STL" />
       </geometry>
       <material
         name="">
@@ -461,20 +461,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_6.STL" />
+          filename="package://shimizu_gantry_system/meshes/link6.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="joint_6"
+    name="joint6"
     type="continuous">
     <origin
-      xyz="0.17393 -0.009 0"
-      rpy="1.5708 0.6256 1.5708" />
+      xyz="0.1665 -0.009 0"
+      rpy="1.5708 0 -1.5708" />
     <parent
-      link="link_5" />
+      link="link5" />
     <child
-      link="link_6" />
+      link="link6" />
     <axis
       xyz="0 0 1" />
   </joint>
