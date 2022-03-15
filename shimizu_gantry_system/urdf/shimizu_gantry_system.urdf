@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="shimizu_gantry_system">
+  <link
+    name="gantry_x">
+    <inertial>
+      <origin
+        xyz="11.601 4.9939 15.827"
+        rpy="0 0 0" />
+      <mass
+        value="11710" />
+      <inertia
+        ixx="63802"
+        ixy="2.5029E-13"
+        ixz="-1.4755E-11"
+        iyy="107050"
+        iyz="-0.050437"
+        izz="45367" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/gantry_x.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/gantry_x.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="gantry_y">
+    <inertial>
+      <origin
+        xyz="11.567 7.7681 0.2024"
+        rpy="0 0 0" />
+      <mass
+        value="740.03" />
+      <inertia
+        ixx="17.062"
+        ixy="0.002039"
+        ixz="-4.9328E-14"
+        iyy="2279.9"
+        iyz="8.4126E-16"
+        izz="2278.6" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/gantry_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/gantry_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="linear_joint_x_to_y"
+    type="prismatic">
+    <origin
+      xyz="0 -16.199 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="gantry_x" />
+    <child
+      link="gantry_y" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="base">
+    <inertial>
+      <origin
+        xyz="0.36884 7.2709 17.038"
+        rpy="0 0 0" />
+      <mass
+        value="645.33" />
+      <inertia
+        ixx="213.99"
+        ixy="0.12239"
+        ixz="-0.00078064"
+        iyy="42.439"
+        iyz="-0.00056304"
+        izz="227.81" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="linear_joint_y_to_base"
+    type="prismatic">
+    <origin
+      xyz="12.22 0 -16.852"
+      rpy="0 0 0" />
+    <parent
+      link="gantry_y" />
+    <child
+      link="base" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.15386 -0.01084 -0.23834"
+        rpy="0 0 0" />
+      <mass
+        value="39.488" />
+      <inertia
+        ixx="0.82415"
+        ixy="-0.13884"
+        ixz="-0.16266"
+        iyy="1.5307"
+        iyz="0.086028"
+        izz="1.6236" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="continuous">
+    <origin
+      xyz="0.44563 5.7729 17.038"
+      rpy="-1.5708 -0.29756 3.1416" />
+    <parent
+      link="base" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.020078 0.20905 0.39436"
+        rpy="0 0 0" />
+      <mass
+        value="26.224" />
+      <inertia
+        ixx="2.763"
+        ixy="-0.0029339"
+        ixz="-0.019264"
+        iyy="2.8501"
+        iyz="-0.03169"
+        izz="0.15604" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="continuous">
+    <origin
+      xyz="0.32 0 -0.1973"
+      rpy="0 1.4788 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.1709 0.0054369 0.13441"
+        rpy="0 0 0" />
+      <mass
+        value="41.069" />
+      <inertia
+        ixx="0.9459"
+        ixy="-0.009691"
+        ixz="-0.49973"
+        iyy="2.6922"
+        iyz="-0.024445"
+        izz="2.2908" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="continuous">
+    <origin
+      xyz="0 0 0.87"
+      rpy="0 -0.47456 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="0.155 -0.0026884 -7.173E-06"
+        rpy="0 0 0" />
+      <mass
+        value="2.0071" />
+      <inertia
+        ixx="0.0038933"
+        ixy="0.00064975"
+        ixz="8.2833E-07"
+        iyy="0.013325"
+        iyz="-4.7487E-07"
+        izz="0.013382" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="continuous">
+    <origin
+      xyz="0.77564 0.0115 0.225"
+      rpy="-2.7191 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.050878 -0.022728 -2.9296E-11"
+        rpy="0 0 0" />
+      <mass
+        value="3.6409" />
+      <inertia
+        ixx="0.0192"
+        ixy="-0.0045288"
+        ixz="-3.1241E-12"
+        iyy="0.019576"
+        iyz="2.3765E-12"
+        izz="0.028883" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="continuous">
+    <origin
+      xyz="0.25386 0 0"
+      rpy="0 0.43006 0" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="1.7764E-14 -2.2024E-05 0.0030403"
+        rpy="0 0 0" />
+      <mass
+        value="0.22702" />
+      <inertia
+        ixx="0.00022782"
+        ixy="-1.423E-19"
+        ixz="-4.513E-18"
+        iyy="0.00022856"
+        iyz="-3.9842E-08"
+        izz="0.00043885" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shimizu_gantry_system/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="continuous">
+    <origin
+      xyz="0.17393 -0.009 0"
+      rpy="1.5708 0.6256 1.5708" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
