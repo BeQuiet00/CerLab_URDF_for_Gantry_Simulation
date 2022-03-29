@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="test2">
+  <link
+    name="gantry_x">
+    <inertial>
+      <origin
+        xyz="-0.00035476 1.1281 0.0030492"
+        rpy="0 0 0" />
+      <mass
+        value="12293" />
+      <inertia
+        ixx="64316"
+        ixy="2.0951E-13"
+        ixz="-1.1712E-11"
+        iyy="107060"
+        iyz="-0.050219"
+        izz="45881" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test2/meshes/gantry_x.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test2/meshes/gantry_x.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="gantry_y">
+    <inertial>
+      <origin
+        xyz="0.184 0.17153 3.0187"
+        rpy="0 0 0" />
+      <mass
+        value="740.03" />
+      <inertia
+        ixx="2278.6"
+        ixy="8.2624E-12"
+        ixz="1.0716E-13"
+        iyy="2279.9"
+        iyz="0.002039"
+        izz="17.062" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test2/meshes/gantry_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test2/meshes/gantry_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_x_y"
+    type="prismatic">
+    <origin
+      xyz="-2.9895 0.28588 3.7013"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="gantry_x" />
+    <child
+      link="gantry_y" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="gantry_base">
+    <inertial>
+      <origin
+        xyz="0.36884 7.271 17.038"
+        rpy="0 0 0" />
+      <mass
+        value="645.33" />
+      <inertia
+        ixx="213.99"
+        ixy="0.12239"
+        ixz="-0.00078074"
+        iyy="42.439"
+        iyz="-0.0004033"
+        izz="227.81" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test2/meshes/gantry_base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test2/meshes/gantry_base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_y_base"
+    type="prismatic">
+    <origin
+      xyz="17.238 -7.5966 3.9575"
+      rpy="3.1416 -1.5708 0" />
+    <parent
+      link="gantry_y" />
+    <child
+      link="gantry_base" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.15386 -0.01084 -0.23834"
+        rpy="0 0 0" />
+      <mass
+        value="39.488" />
+      <inertia
+        ixx="0.82415"
+        ixy="-0.13884"
+        ixz="-0.16266"
+        iyy="1.5307"
+        iyz="0.086028"
+        izz="1.6236" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test2/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test2/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="continuous">
+    <origin
+      xyz="0.44563 5.7729 17.038"
+      rpy="-1.5708 -0.81903 3.1416" />
+    <parent
+      link="gantry_base" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.020078 0.14605 0.39436"
+        rpy="0 0 0" />
+      <mass
+        value="26.224" />
+      <inertia
+        ixx="2.763"
+        ixy="-0.0029338"
+        ixz="-0.019263"
+        iyy="2.8501"
+        iyz="-0.03169"
+        izz="0.15604" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test2/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test2/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="continuous">
+    <origin
+      xyz="0.32 0 -0.1973"
+      rpy="0 -0.01315 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>
