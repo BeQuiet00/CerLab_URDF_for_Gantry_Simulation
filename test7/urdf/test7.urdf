@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="test7">
+  <link
+    name="structure">
+    <inertial>
+      <origin
+        xyz="-0.00035476 1.1281 0.0030492"
+        rpy="0 0 0" />
+      <mass
+        value="12293" />
+      <inertia
+        ixx="64316"
+        ixy="1.8079E-13"
+        ixz="-9.9719E-12"
+        iyy="107060"
+        iyz="-0.050219"
+        izz="45881" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test7/meshes/structure.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test7/meshes/structure.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="x_rail">
+    <inertial>
+      <origin
+        xyz="-0.184 0.17153 3.0187"
+        rpy="0 0 0" />
+      <mass
+        value="740.03" />
+      <inertia
+        ixx="2278.6"
+        ixy="8.2654E-12"
+        ixz="1.0694E-13"
+        iyy="2279.9"
+        iyz="0.002039"
+        izz="17.062" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test7/meshes/x_rail.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test7/meshes/x_rail.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="prismatic">
+    <origin
+      xyz="-2.9895 0.0447 3.7013"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="structure" />
+    <child
+      link="x_rail" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="carriage">
+    <inertial>
+      <origin
+        xyz="0.36884 7.271 17.038"
+        rpy="0 0 0" />
+      <mass
+        value="645.33" />
+      <inertia
+        ixx="213.99"
+        ixy="0.12239"
+        ixz="-0.00078074"
+        iyy="42.439"
+        iyz="-0.0004033"
+        izz="227.81" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test7/meshes/carriage.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test7/meshes/carriage.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="prismatic">
+    <origin
+      xyz="16.87 -7.5966 3.1202"
+      rpy="3.1416 -1.5708 0" />
+    <parent
+      link="x_rail" />
+    <child
+      link="carriage" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
