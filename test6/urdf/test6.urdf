@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="test6">
+  <link
+    name="gantry_x">
+    <inertial>
+      <origin
+        xyz="-0.000354763107278105 1.1281100367493 0.00304919530374608"
+        rpy="0 0 0" />
+      <mass
+        value="12293.2154089237" />
+      <inertia
+        ixx="64315.9848906651"
+        ixy="1.80791072435564E-13"
+        ixz="-9.97023101525119E-12"
+        iyy="107061.453631538"
+        iyz="-0.0502186982763295"
+        izz="45881.0476517075" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test6/meshes/gantry_x.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test6/meshes/gantry_x.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="gantry_y">
+    <inertial>
+      <origin
+        xyz="-0.184000317104819 0.171530993198971 3.01867903369415"
+        rpy="0 0 0" />
+      <mass
+        value="740.0303448616" />
+      <inertia
+        ixx="2278.62582732281"
+        ixy="8.26474761024543E-12"
+        ixz="1.08412801154151E-13"
+        iyy="2279.87804604228"
+        iyz="0.00203895408113637"
+        izz="17.0621024004927" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test6/meshes/gantry_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test6/meshes/gantry_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_x_y"
+    type="prismatic">
+    <origin
+      xyz="-2.98945660329456 0.044699968231428 3.70127996148337"
+      rpy="1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="gantry_x" />
+    <child
+      link="gantry_y" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="gantry_base">
+    <inertial>
+      <origin
+        xyz="0.368841461614903 7.27095111055009 17.0382479530342"
+        rpy="0 0 0" />
+      <mass
+        value="645.325992510265" />
+      <inertia
+        ixx="213.993771610598"
+        ixy="0.122391994933905"
+        ixz="-0.000780740952565769"
+        iyy="42.4394302906328"
+        iyz="-0.000403300867043894"
+        izz="227.813506684052" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test6/meshes/gantry_base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test6/meshes/gantry_base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_y_base"
+    type="prismatic">
+    <origin
+      xyz="16.8702506496696 -7.59658348569734 3.1202416364342"
+      rpy="3.14159179176661 -1.5707963267949 0" />
+    <parent
+      link="gantry_y" />
+    <child
+      link="gantry_base" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
