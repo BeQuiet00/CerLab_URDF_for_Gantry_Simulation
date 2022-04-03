@@ -1,1 +1,1 @@
-controller_joint_names: ['', 'x_to_y', 'y_to_base', 'joint1', 'joint2', 'joint3', 'joint4', 'joint5', 'joint6', ]
+controller_joint_names: ['', 'joint_structure_rail', 'joint_rail_carriage', 'joint_1', 'joint_2', 'joint_3', 'joint_4', 'joint_5', 'joint_6', ]
