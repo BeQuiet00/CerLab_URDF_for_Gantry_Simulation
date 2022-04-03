@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(shimizu_gantry_system)
+project(urdf_shimizu_gantry)
 
 find_package(catkin REQUIRED)
 

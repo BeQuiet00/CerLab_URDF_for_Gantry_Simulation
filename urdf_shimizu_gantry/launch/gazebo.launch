@@ -10,7 +10,7 @@
     name="spawn_model"
     pkg="gazebo_ros"
     type="spawn_model"
-    args="-file $(find shimizu_gantry_system)/urdf/shimizu_gantry_system.urdf -urdf -model shimizu_gantry_system"
+    args="-file $(find urdf_shimizu_gantry)/urdf/urdf_shimizu_gantry.urdf -urdf -model urdf_shimizu_gantry"
     output="screen" />
   <node
     name="fake_joint_calibration"

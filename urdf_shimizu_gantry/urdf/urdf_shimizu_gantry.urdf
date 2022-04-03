@@ -3,22 +3,22 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="shimizu_gantry_system">
+  name="urdf_shimizu_gantry">
   <link
     name="structure">
     <inertial>
       <origin
-        xyz="4.0286 4.6859 1.1281"
+        xyz="4.02864523689272 4.68594983260276 1.12811003412139"
         rpy="0 0 0" />
       <mass
-        value="12293" />
+        value="12293.2154089237" />
       <inertia
-        ixx="64316"
-        ixy="4.7295E-12"
-        ixz="2.1029E-13"
-        iyy="45881"
-        iyz="-0.0025005"
-        izz="107060" />
+        ixx="64315.9848906651"
+        ixy="4.72802642796216E-12"
+        ixz="2.09421886683001E-13"
+        iyy="45881.0476516664"
+        iyz="-0.00250051596600884"
+        izz="107061.453631579" />
     </inertial>
     <visual>
       <origin
@@ -26,12 +26,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/structure.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/structure.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/structure.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/structure.STL" />
       </geometry>
     </collision>
   </link>
@@ -48,17 +48,17 @@
     name="x_rail">
     <inertial>
       <origin
-        xyz="3.0187 0.184 0.17153"
+        xyz="3.01867903369415 0.184 0.171530993197756"
         rpy="0 0 0" />
       <mass
-        value="740.03" />
+        value="740.030344861601" />
       <inertia
-        ixx="17.062"
-        ixy="-9.0349E-15"
-        ixz="0.002039"
-        iyy="2278.6"
-        iyz="4.5596E-16"
-        izz="2279.9" />
+        ixx="17.0621024004927"
+        ixy="2.83241688155883E-14"
+        ixz="0.00203895408136847"
+        iyy="2278.62582732281"
+        iyz="1.76239718774695E-15"
+        izz="2279.87804604228" />
     </inertial>
     <visual>
       <origin
@@ -66,12 +66,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/x_rail.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/x_rail.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/x_rail.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/x_rail.STL" />
       </geometry>
     </collision>
   </link>
@@ -88,7 +88,7 @@
     name="joint_structure_rail"
     type="prismatic">
     <origin
-      xyz="1.0082 3.756 3.7013"
+      xyz="1.0082 1.4226 3.7013"
       rpy="0 0 0" />
     <parent
       link="structure" />
@@ -98,25 +98,25 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="0"
+      upper="6.1489"
       effort="0"
-      velocity="0" />
+      velocity="2" />
   </joint>
   <link
     name="carriage">
     <inertial>
       <origin
-        xyz="-0.076789 3.2516E-06 -0.81076"
+        xyz="-0.0767885383850957 3.25158768843536E-06 -0.810755943086886"
         rpy="0 0 0" />
       <mass
-        value="645.33" />
+        value="645.325992510266" />
       <inertia
-        ixx="213.99"
-        ixy="-0.00078064"
-        ixz="-0.12239"
-        iyy="227.81"
-        iyz="0.00056304"
-        izz="42.439" />
+        ixx="213.993771610598"
+        ixy="-0.000780635487259871"
+        ixz="-0.122391995606642"
+        iyy="227.813506683219"
+        iyz="0.000563037885594549"
+        izz="42.4394302914655" />
     </inertial>
     <visual>
       <origin
@@ -124,12 +124,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/carriage.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/carriage.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -138,7 +138,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/carriage.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/carriage.STL" />
       </geometry>
     </collision>
   </link>
@@ -146,7 +146,7 @@
     name="joint_rail_carriage"
     type="prismatic">
     <origin
-      xyz="2.0675 0.184 -1.1204"
+      xyz="0.77533 0.184 -1.1204"
       rpy="3.1416 0 0" />
     <parent
       link="x_rail" />
@@ -156,25 +156,25 @@
       xyz="-1 0 0" />
     <limit
       lower="0"
-      upper="0"
+      upper="4.6411"
       effort="0"
-      velocity="0" />
+      velocity="2" />
   </joint>
   <link
     name="link_1">
     <inertial>
       <origin
-        xyz="0.15386 -0.010839 0.14546"
+        xyz="0.153855773577067 -0.0108391686999965 0.14545822040491"
         rpy="0 0 0" />
       <mass
-        value="39.488" />
+        value="39.4879875307153" />
       <inertia
-        ixx="0.82415"
-        ixy="-0.13884"
-        ixz="-0.16266"
-        iyy="1.5307"
-        iyz="0.086029"
-        izz="1.6236" />
+        ixx="0.824149711926212"
+        ixy="-0.138842015880573"
+        ixz="-0.162656036308918"
+        iyy="1.53073509987707"
+        iyz="0.0860291058897645"
+        izz="1.62356171854091" />
     </inertial>
     <visual>
       <origin
@@ -182,12 +182,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_1.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/link_1.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
     <collision>
@@ -196,7 +196,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_1.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/link_1.STL" />
       </geometry>
     </collision>
   </link>
@@ -212,22 +212,27 @@
       link="link_1" />
     <axis
       xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="6.28"
+      effort="0"
+      velocity="2.97" />
   </joint>
   <link
     name="link_2">
     <inertial>
       <origin
-        xyz="0.020078 0.056046 0.39436"
+        xyz="0.020077813377676 0.0560459059507608 0.394357513309894"
         rpy="0 0 0" />
       <mass
-        value="26.224" />
+        value="26.2236990697048" />
       <inertia
-        ixx="2.763"
-        ixy="-0.0029337"
-        ixz="-0.019264"
-        iyy="2.8501"
-        iyz="-0.03169"
-        izz="0.15604" />
+        ixx="2.76302886204916"
+        ixy="-0.0029336984886039"
+        ixz="-0.0192637719147364"
+        iyy="2.85009084274849"
+        iyz="-0.0316903714210222"
+        izz="0.156036556588808" />
     </inertial>
     <visual>
       <origin
@@ -235,12 +240,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_2.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/link_2.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
     <collision>
@@ -249,7 +254,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_2.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/link_2.STL" />
       </geometry>
     </collision>
   </link>
@@ -265,22 +270,27 @@
       link="link_2" />
     <axis
       xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="4.28"
+      effort="0"
+      velocity="2.44" />
   </joint>
   <link
     name="link_3">
     <inertial>
       <origin
-        xyz="0.1709 -0.091062 0.13441"
+        xyz="0.170898646752524 -0.091062342216772 0.134410265708193"
         rpy="0 0 0" />
       <mass
-        value="41.069" />
+        value="41.0689199450586" />
       <inertia
-        ixx="0.9459"
-        ixy="-0.0096924"
-        ixz="-0.49972"
-        iyy="2.6922"
-        iyz="-0.024444"
-        izz="2.2908" />
+        ixx="0.945895108155531"
+        ixy="-0.00969241760289385"
+        ixz="-0.499722255629703"
+        iyy="2.69220328758168"
+        iyz="-0.0244441336676499"
+        izz="2.29076140111484" />
     </inertial>
     <visual>
       <origin
@@ -288,12 +298,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_3.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/link_3.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
     <collision>
@@ -302,7 +312,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_3.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/link_3.STL" />
       </geometry>
     </collision>
   </link>
@@ -318,22 +328,27 @@
       link="link_3" />
     <axis
       xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="6.28"
+      effort="0"
+      velocity="2.79" />
   </joint>
   <link
     name="link_4">
     <inertial>
       <origin
-        xyz="0.095631 -0.0026884 -7.1299E-06"
+        xyz="0.0956311013862567 -0.00268842106149214 -7.12992390861089E-06"
         rpy="0 0 0" />
       <mass
-        value="2.0071" />
+        value="2.00706266186349" />
       <inertia
-        ixx="0.0038933"
-        ixy="0.00064975"
-        ixz="8.2641E-07"
-        iyy="0.013325"
-        iyz="-4.7428E-07"
-        izz="0.013382" />
+        ixx="0.00389327540269091"
+        ixy="0.00064975423626537"
+        ixz="8.26409373694784E-07"
+        iyy="0.0133247237607867"
+        iyz="-4.74277197034284E-07"
+        izz="0.0133817828168185" />
     </inertial>
     <visual>
       <origin
@@ -341,12 +356,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_4.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/link_4.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
     <collision>
@@ -355,7 +370,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_4.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/link_4.STL" />
       </geometry>
     </collision>
   </link>
@@ -371,22 +386,27 @@
       link="link_4" />
     <axis
       xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="12.57"
+      effort="0"
+      velocity="4.01" />
   </joint>
   <link
     name="link_5">
     <inertial>
       <origin
-        xyz="0.050878 0.028472 -5.4122E-11"
+        xyz="0.050878018195565 0.0284723314407811 -5.41222622274518E-11"
         rpy="0 0 0" />
       <mass
-        value="3.6409" />
+        value="3.64087786116007" />
       <inertia
-        ixx="0.0192"
-        ixy="-0.0045288"
-        ixz="-3.9585E-12"
-        iyy="0.019576"
-        iyz="-1.4292E-13"
-        izz="0.028883" />
+        ixx="0.0192001204191004"
+        ixy="-0.00452880493617186"
+        ixz="-3.95847828974483E-12"
+        iyy="0.0195762180673155"
+        iyz="-1.42922407696642E-13"
+        izz="0.0288833593415117" />
     </inertial>
     <visual>
       <origin
@@ -394,12 +414,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_5.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/link_5.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
     <collision>
@@ -408,7 +428,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_5.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/link_5.STL" />
       </geometry>
     </collision>
   </link>
@@ -424,22 +444,27 @@
       link="link_5" />
     <axis
       xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="4.36"
+      effort="0"
+      velocity="4.01" />
   </joint>
   <link
     name="link_6">
     <inertial>
       <origin
-        xyz="-0.011532 2.2024E-05 0"
+        xyz="-0.0115315270371852 2.20242441926199E-05 0"
         rpy="0 0 0" />
       <mass
-        value="0.22702" />
+        value="0.227022546438295" />
       <inertia
-        ixx="0.00043885"
-        ixy="3.9842E-08"
-        ixz="-3.0309E-21"
-        iyy="0.00022856"
-        iyz="-1.0535E-20"
-        izz="0.00022782" />
+        ixx="0.000438850422148637"
+        ixy="3.98423648141008E-08"
+        ixz="6.94392741721848E-21"
+        iyy="0.000228564265416646"
+        iyz="-9.81235572213125E-21"
+        izz="0.00022782098747856" />
     </inertial>
     <visual>
       <origin
@@ -447,12 +472,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_6.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/link_6.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
     <collision>
@@ -461,7 +486,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://shimizu_gantry_system/meshes/link_6.STL" />
+          filename="package://urdf_shimizu_gantry/meshes/link_6.STL" />
       </geometry>
     </collision>
   </link>
@@ -477,5 +502,10 @@
       link="link_6" />
     <axis
       xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="12.57"
+      effort="0"
+      velocity="6.11" />
   </joint>
 </robot>

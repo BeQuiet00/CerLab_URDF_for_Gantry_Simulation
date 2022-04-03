@@ -1,10 +1,10 @@
 <package format="2">
-  <name>shimizu_gantry_system</name>
+  <name>urdf_shimizu_gantry</name>
   <version>1.0.0</version>
   <description>
-    <p>URDF Description package for shimizu_gantry_system</p>
+    <p>URDF Description package for urdf_shimizu_gantry</p>
     <p>This package contains configuration data, 3D models and launch files
-for shimizu_gantry_system robot</p>
+for urdf_shimizu_gantry robot</p>
   </description>
   <author>TODO</author>
   <maintainer email="TODO@email.com" />
